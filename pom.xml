@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>numeral-js</artifactId>
-    <version>1.5.4-SNAPSHOT</version>
+    <version>1.5.3-1-SNAPSHOT</version>
     <name>Numeral.js</name>
     <description>WebJar for Numeral.js</description>
     <url>http://webjars.org</url>
@@ -43,7 +43,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <upstream.version>1.5.3</upstream.version>
         <upstream.url>https://github.com/adamwdraper/Numeral-js/archive</upstream.url>
-        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
+        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
+        <requirejs>
+            {
+                "paths": { "numeral-js": "numeral"}
+            }
+        </requirejs>
     </properties>
 
     <build>
